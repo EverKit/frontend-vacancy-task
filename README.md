@@ -1,6 +1,6 @@
 # EverKit | React Frontend Developer Vacancy Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Banner](banner.jpg)
 
 ## Task
 
@@ -22,6 +22,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 6. Прислать в форму заявки ссылки на github и сайт
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
