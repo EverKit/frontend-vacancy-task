@@ -6,33 +6,30 @@ import './Token.css'
 export function Token() {
     const [customFilter, setCustomFilter] = useState('')
 
-    function updateFilter(event: React.ChangeEvent<HTMLInputElement>){
+    function updateFilter(customFilter:string, event: any){
         event?.preventDefault()
-        console.log(event.target)
-        //setCustomFilter(customFilter)
+        setCustomFilter(customFilter)
     }
 
-    const tokenList = customFilter.length > 0 ? tokens.filter(item => {
+    const tokenList = customFilter.length > 0 ? tokens.map(item => {
         if (item.categories.includes(customFilter)){
-            console.log(item)
             return <TokenItem {...item}/>
         }
     }) : tokens.map(item => {
-        <TokenItem {...item}/>
+        return <TokenItem {...item}/>
     })
 
-    console.log(tokenList)
 
     return (
         <div className="tokens-layout">
             <div className="tokens-bar">
                 <h2 className="token-title">Токены Everscale</h2>
                 <ul className="token-menu">
-                    <li onClick={() => setCustomFilter('')}>Все</li>
-                    <li onClick={() => setCustomFilter('defi')}>DeFi</li>
-                    <li onClick={() => setCustomFilter('wallets')}>Wallets</li>
-                    <li onClick={() => setCustomFilter('games')}>Games</li>
-                    <li onClick={() => setCustomFilter('dex')}>Dex</li>
+                    <li onClick={(e) => updateFilter('', e)}>Все</li>
+                    <li onClick={(e) => updateFilter('defi', e)}>DeFi</li>
+                    <li onClick={(e) => updateFilter('wallets', e)}>Wallets</li>
+                    <li onClick={(e) => updateFilter('games', e)}>Games</li>
+                    <li onClick={(e) => updateFilter('dex', e)}>Dex</li>
                 </ul>
             </div>
             <div className="tokens">
