@@ -1,23 +1,16 @@
 import React, { useState } from 'react'
-import { tokens, categories } from './tokens'
-import { menu } from './menu'
+import { categories } from './tokens'
 import './App.css'
+import { Token } from './Token/Token'
+import Menu from './Menu/Menu'
 
 function App() {
   const [category, setCategory] = useState(categories[0])
 
   return (
     <div className="app">
-      <div className="menu">
-        {menu.map((item) => (
-          <div className="menu-item">{item.title}</div>
-        ))}
-      </div>
-      <div className="tokens">
-        {tokens.map((item) => (
-          <div className="token">{item.name}</div>
-        ))}
-      </div>
+      <Menu/>
+      <Token/>
     </div>
   )
 }

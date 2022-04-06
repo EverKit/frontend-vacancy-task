@@ -1,0 +1,30 @@
+.menu-item {
+    margin-bottom: 24px;
+    left: 0px;
+    top: 48px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    color: #ffffff;
+    border: 2px solid #ffffff00;
+}
+
+.menu-item-title{
+    margin-left: 24px;
+}
+
+.menu-item:hover {
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.menu-item-active{
+    background: #FFFFFF;
+    color: #000000;
+    color: #6347F5;
+}
+
+.menu-item-title-active{
+    color: #000000;
+}

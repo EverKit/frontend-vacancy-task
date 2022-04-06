@@ -1,0 +1,137 @@
+.token{
+    max-width: 1344px;
+    transition: all 0.6 ease;
+}
+
+.token:hover{
+    cursor: pointer;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 2px #6347F5;
+}
+
+.token-visible{
+    display: flex;
+    align-items: center;
+}
+
+.token-id{
+    margin-right: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #93949D;
+}
+
+.token-image{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.token-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.token-info *{
+   max-width: 220px;
+   width: 100%;
+}
+
+.token-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.token-name-symbol{
+    font-size: 16px;
+    color: #6347F5;
+}
+
+.token-price{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    display: flex;
+    color: #6347F5;
+}
+
+.token-price-change{
+    font-size: 14px;
+}
+
+.token-price-change *:not(:last-child){
+    margin-right: 20px;
+    position: relative;
+}
+
+.token-price-change *:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #93949D;
+    right: -11px;
+    bottom: 38%;
+    border-radius: 50%;
+}
+
+.token-price-change-green{
+    color: #30BF8C; 
+}
+
+.token-price-change-red{
+    color: #FF647C;
+}
+
+.token-price-change-gray{
+    color: #93949D;
+}
+
+.token-volume{
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}
+
+.token-volume-change-percentage{
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 120%;
+    color: #6347F5;
+}
+
+.token-tab svg{
+    width: 20px;
+    height: 11px;
+}
+
+.token-tab:hover{
+    cursor: pointer;
+}
+
+.token-tab-open{
+   transform: rotate(180deg);
+}
+
+.token-description{
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 120%;
+    color: #5D5E6C;
+}
+
+.hidden{
+    display: none;
+}

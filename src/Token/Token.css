@@ -1,0 +1,33 @@
+.tokens-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.token-menu{
+    display: flex;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 25px rgb(0 0 0 / 4%);
+    padding: 8px 4px;
+}
+
+.token-menu li{
+    align-items: center;
+    border-radius: 16px;
+    color: #93949d;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: .02em;
+    line-height: 100%;
+    margin: 0 2px;
+    padding: 8px;
+    text-align: center;
+    transition: .2s;
+}
+
+.token-menu li.active{
+    background: linear-gradient(201.66deg,#b380fd 12.94%,#6347f5 78.23%);
+    color: #fff;
+}
