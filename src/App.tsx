@@ -8,6 +8,7 @@ function App() {
       <div className="app">
         <SideBarMenu />
         <Routes>
+          <Route path="/" element={<TokensContent />} />
           <Route path="/tokensContent" element={<TokensContent />} />
           <Route path="/search" element={<Search />} />
         </Routes>
