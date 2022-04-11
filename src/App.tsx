@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { SideBarMenu, TokensContent, Search } from './Components'
+import { SideBarMenu, TokensContent, Search } from './components'
 
 function App() {
   return (

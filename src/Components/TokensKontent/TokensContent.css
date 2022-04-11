@@ -1,6 +1,6 @@
 .tokens {
   flex: 1;
-  border-top-left-radius:24px;
+  border-top-left-radius: 24px;
   overflow: auto;
   padding: 32px;
 }

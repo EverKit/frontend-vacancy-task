@@ -1,5 +1,5 @@
 import React from 'react'
-import { userIcon, Shape } from '../../Assets/Icon'
+import { userIcon, Shape } from '../../assets/Icon'
 import { tokens, categories } from '../../tokens'
 import { useState } from 'react'
 import './TokensContent.css'
@@ -7,12 +7,12 @@ import './TokensContent.css'
 export default function TokensContent() {
   const [category, setCategory] = useState<number | null>(0)
   const [filtered, setFiltered] = useState(tokens)
-  const [VisibleDescription, setVisibleDescription] = useState<any>([])
+  const [visibleDescription, setVisibleDescription] = useState<number[]>([])
 
   const setActiveItem = (index: number) => {
     setCategory(index)
   }
-  
+
   /** фУНКЦИЯ СОРТИРОВКИ*/
   const tokenFilter = (cat: string, index: number) => {
     if (cat === 'Все') {
@@ -27,15 +27,13 @@ export default function TokensContent() {
     setActiveItem(index)
   }
 
- 
   const handlePoppup = (id: number) => {
-    if (VisibleDescription.includes(id)) {
-      setVisibleDescription([...VisibleDescription.filter((i: number) => i !== id)])
-    } else if (!VisibleDescription.includes(id)) {
-      setVisibleDescription([...VisibleDescription, id])
+    if (visibleDescription.includes(id)) {
+      setVisibleDescription([...visibleDescription.filter((i: number) => i !== id)])
+    } else if (!visibleDescription.includes(id)) {
+      setVisibleDescription([...visibleDescription, id])
     }
   }
-  console.log(VisibleDescription)
 
   return (
     <div className="tokens">
@@ -58,7 +56,7 @@ export default function TokensContent() {
           </div>
         </div>
         {filtered.map((item, index) => {
-          const vis = VisibleDescription.find((v: number) => v === item.id)
+          const vis = visibleDescription.find((visible: number) => visible === item.id)
 
           return (
             <div key={item.id} className="token">
@@ -69,7 +67,7 @@ export default function TokensContent() {
                 <div className="logo">
                   <img className="tokenLogo" alt="0" src={item.logoURI} />
                 </div>
-                {console.log(item.logoURI)}
+
                 <div className="name">
                   <h3>{item.name}</h3>
                   <span className="symbol">{item.symbol}</span>
