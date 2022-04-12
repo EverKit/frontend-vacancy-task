@@ -1,3 +1,6 @@
+> :exclamation: **Прием заявок остановлен:** Мы нашли нового члена команды.
+
+
 # EverKit | React Frontend Developer Vacancy Task
 
 ![Banner](banner.jpg)
